@@ -10,19 +10,19 @@ Please install the following dependencies:
 
 - Axios/to make our request!
 (https://www.npmjs.com/package/axios)
-npm install axios
+  - npm install axios
 
 - Skeleton/Makes beautiful, animated loading skeletons that automatically adapt to your app.
 (https://www.npmjs.com/package/react-loading-skeleton) 
-Install by npm/yarn with react-loading-skeleton
+  - Install by npm/yarn with react-loading-skeleton
 
 - React Strap/Easy to use React Bootstrap 4 components 
 (https://reactstrap.github.io/) 
-npm install --save reactstrap react react-dom
+ - npm install --save reactstrap react react-dom
 
 - React Bootstrap/one is not enough!
 (https://react-bootstrap.github.io/getting-started/introduction)
-npm install react-bootstrap bootstrap
+ - npm install react-bootstrap bootstrap
 
 ### `npm start`
 
