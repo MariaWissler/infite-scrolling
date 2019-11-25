@@ -18,11 +18,11 @@ Please install the following dependencies:
 
 - React Strap/Easy to use React Bootstrap 4 components 
 (https://reactstrap.github.io/) 
- - npm install --save reactstrap react react-dom
+  - npm install --save reactstrap react react-dom
 
 - React Bootstrap/one is not enough!
 (https://react-bootstrap.github.io/getting-started/introduction)
- - npm install react-bootstrap bootstrap
+  - npm install react-bootstrap bootstrap
 
 ### `npm start`
 
