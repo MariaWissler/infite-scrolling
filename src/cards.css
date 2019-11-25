@@ -1,9 +1,10 @@
 .cards {
+  margin-top: 4%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: rgba(198, 198, 198, 0.214)
+
 }
 
 .fallback-card{
@@ -58,16 +59,20 @@
 }
 
 .search-bar{
+  position: absolute;
   background: rgba(6, 35, 99, 0.495);
-  height: 3em;
+  height: 4.2em;
+  width: 101%
+ 
 }
 
 .search-input{
   width: 20em !important;
   height: 2em;
   margin-left: 78em;
-  margin-top: .5em;
+  margin-top: 1em;
   font-family: 'Average', serif;
+  margin-left:65% !important;
 }
 
 .btn-secondary{
@@ -76,3 +81,17 @@
   font-family: 'Average', serif;
 }
 
+.reload{
+  background: rgba(198, 198, 198, 0.214);
+  width: 101%;
+}
+
+
+.load-all.btn.btn-secondary{
+  position: absolute;
+  background: rgba(6, 35, 99, 0.495)  !important;
+  border-color: none !important;
+  font-family: 'Average', serif;
+  margin-left: 90% !important;
+  margin-top: 2em;
+}

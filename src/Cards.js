@@ -46,6 +46,7 @@ class CardComponent extends Component {
     }
     if (totalCards !== this.state.cards.length) {
         //also in case if a search we stop the scrolling om=nce all the results are shown 
+        
       this.setState(
         {
           page: page + 1
@@ -64,6 +65,7 @@ class CardComponent extends Component {
   };
 
   getMagicCards = () => {
+    
 
     const { cards, page, pageSize } = this.state;
     this.setState({
@@ -92,7 +94,7 @@ class CardComponent extends Component {
 
   getMagicCardsByName = () => {
 
-    const { cards, page, pageSize, queryName } = this.state;
+    const { page, pageSize, queryName } = this.state;
 
     this.setState({
       isLoading: true
@@ -111,7 +113,7 @@ class CardComponent extends Component {
         this.setState({
           cards: data.cards,
           isLoading: false,
-          totalCards: cards.length
+          totalCards: this.state.cards.length
         });
         console.log(this.state.totalCards);
       })
@@ -124,7 +126,7 @@ class CardComponent extends Component {
     const { cards, isLoading, queryName } = this.state;
 
     return (
-      <div>
+      <div className="background">
         <div className="search-bar">
           <input
             className="search-input"
@@ -133,7 +135,6 @@ class CardComponent extends Component {
             onChange={this.handleInput}
             value={queryName}
           ></input>
-        
           {queryName ? (
             <Button
               color="secondary"
@@ -145,6 +146,14 @@ class CardComponent extends Component {
           ) : (
             <div></div>
           )}
+           <div className="reload">
+        <Button
+              className="load-all"
+              onClick={this.getMagicCards}
+            >
+             Reload All Cards
+        </Button>
+        </div>
         </div>
         <div className="cards">
           {cards.map(card => (
@@ -165,14 +174,15 @@ class CardComponent extends Component {
                   alt="image not found"
                 />
               )}
-              <CardBody clasName="card-body">
-                <CardTitle className="card-titles">{card.name}</CardTitle>
-                <CardText>Artist:{card.artist}</CardText>
-                <CardText>Set Name:{card.setName}</CardText>
-                <CardText>Original Type:{card.type}</CardText>
+              <CardBody className="card-body">
+                <CardTitle className="card-titles">~{card.name}~</CardTitle>
+                <CardText>Artist: {card.artist}</CardText>
+                <CardText>Set Name: {card.setName}</CardText>
+                <CardText>Original Type: {card.type}</CardText>
               </CardBody>
-            </Card>
-          ))}
+          </Card> 
+        ))}
+        
           {isLoading && (
             <div className="skeleton">
               <SkeletonTheme color="#d6d3d3">

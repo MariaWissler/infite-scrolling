@@ -1,10 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm dependencies`
+### `npm dependencies` About: 
 
 Please install the following dependencies:
 
@@ -28,7 +29,10 @@ Please install the following dependencies:
 (https://react-bootstrap.github.io/getting-started/introduction)
   - npm install react-bootstrap bootstrap
 
-### `npm start`
+### `npm start` and CORS 
+
+Due to CORS, use this plugin that allows you to send cross-domain requests so you are able to see the cards:
+---->(https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -36,8 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-
-READ----> Side Note: if your search returns no results, please refresh the page, as router hasn't been implemented in ths version <----
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
