@@ -21,7 +21,7 @@ class CardComponent extends Component {
       page: 1,
       pageSize: 20,
       queryName: "",
-      totalCards: 0,
+      totalCards: 0
     };
   }
 
@@ -33,43 +33,47 @@ class CardComponent extends Component {
   }
 
   componentUnMount() {
-    // let's make sure wer emove the scrolle event listener when the comp. unmounts
+    // let's make sure we move the scroller event listener when the comp-unmounts
     window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = () => {
-    const { page, isLoading,totalCards } = this.state;
+    const { page, isLoading, totalCards } = this.state;
     // when  user scrolls to the bottom, then get the new list of magic cards
     if (isLoading) {
       // if a request is pending, we need wait for it to finish before fetch another list
       return null;
     }
-    if(totalCards !== this.state.cards.length ){
-    this.setState(
-      {
-        page: page + 1
-      },
+    if (totalCards !== this.state.cards.length) {
+        //also in case if a search we stop the scrolling om=nce all the results are shown 
+      this.setState(
+        {
+          page: page + 1
+          // go to the next page set of 20 magic cards
+        },
 
-      () => this.getMagicCards()
-    )};
+        () => this.getMagicCards()
+      );
+    }
   };
 
   handleInput = event => {
+      // we got a search !
     this.setState({ queryName: event.target.value });
     console.log(`this is the search value`, this.state.queryName);
   };
 
   getMagicCards = () => {
+
     const { cards, page, pageSize } = this.state;
     this.setState({
       isLoading: true
-    })
+    });
 
     const request = axios({
       method: "GET",
       url: `http://api.magicthegathering.io/v1/cards?page=${page}&pageSize=${pageSize}&types=${"Creature"}`
     });
-
 
     request
       .then(response => {
@@ -87,10 +91,12 @@ class CardComponent extends Component {
   };
 
   getMagicCardsByName = () => {
+
     const { cards, page, pageSize, queryName } = this.state;
+
     this.setState({
       isLoading: true
-    })
+    });
 
     let searchName = queryName.toLowerCase();
 
@@ -105,7 +111,7 @@ class CardComponent extends Component {
         this.setState({
           cards: data.cards,
           isLoading: false,
-          totalCards: cards.length,
+          totalCards: cards.length
         });
         console.log(this.state.totalCards);
       })
@@ -114,69 +120,67 @@ class CardComponent extends Component {
       });
   };
 
-
   render() {
     const { cards, isLoading, queryName } = this.state;
 
     return (
-       <div>
+      <div>
         <div className="search-bar">
-        <input
-        className="search-input"
-          type="text"
-          placeholder="Search by Name"
-          onChange={this.handleInput}
-          value={queryName}
-        ></input>
-        {queryName ? (
-          <Button
-            color="secondary"
-            className="search-button"
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search by Name"
+            onChange={this.handleInput}
+            value={queryName}
+          ></input>
         
-            onClick={this.getMagicCardsByName}
-          >
-            Search
-          </Button>
-        ) : (
-          <div></div>
-        )}
+          {queryName ? (
+            <Button
+              color="secondary"
+              className="search-button"
+              onClick={this.getMagicCardsByName}
+            >
+              Search
+            </Button>
+          ) : (
+            <div></div>
+          )}
         </div>
-      <div className="cards">
-
-        {cards.map(card => (
-          <Card className="creature-card">
-            {card.imageUrl ? (
-              <CardImg
-                top
-                width="70%"
-                key={card.id}
-                src={card.imageUrl}
-                alt="Card image"
-              />
-            ) : (
-              <CardImg
-                className="fallback-card"
-                key={card.id}
-                src={backCard}
-                alt="image not found"
-              />
-            )}
-            <CardBody clasName="card-body">
-              <CardTitle className="card-titles">{card.name}</CardTitle>
-              <CardText>Artist:{card.artist}</CardText>
-              <CardText>Set Name:{card.setName}</CardText>
-              <CardText>Original Type:{card.type}</CardText>
-            </CardBody>
-          </Card>
-        ))}
-        {isLoading && (
-          <div className="skeleton">
-            <SkeletonTheme color="#d6d3d3">
-              <Skeleton width={300} height={450} count={20} />
-            </SkeletonTheme>
-          </div>
-        )}
-      </div>
+        <div className="cards">
+          {cards.map(card => (
+            <Card className="creature-card">
+              {card.imageUrl ? (
+                <CardImg
+                  top
+                  width="70%"
+                  key={card.id}
+                  src={card.imageUrl}
+                  alt="Card image"
+                />
+              ) : (
+                <CardImg
+                  className="fallback-card"
+                  key={card.id}
+                  src={backCard}
+                  alt="image not found"
+                />
+              )}
+              <CardBody clasName="card-body">
+                <CardTitle className="card-titles">{card.name}</CardTitle>
+                <CardText>Artist:{card.artist}</CardText>
+                <CardText>Set Name:{card.setName}</CardText>
+                <CardText>Original Type:{card.type}</CardText>
+              </CardBody>
+            </Card>
+          ))}
+          {isLoading && (
+            <div className="skeleton">
+              <SkeletonTheme color="#d6d3d3">
+                <Skeleton width={300} height={450} count={20} />
+              </SkeletonTheme>
+            </div>
+          )}
+        </div>
       </div>
     );
   }

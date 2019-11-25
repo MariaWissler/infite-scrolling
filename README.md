@@ -12,6 +12,10 @@ Please install the following dependencies:
 (https://www.npmjs.com/package/axios)
   - npm install axios
 
+- Router/always needed!
+(https://www.npmjs.com/package/react-router-dom)
+ npm install --save react-router-dom
+
 - Skeleton/Makes beautiful, animated loading skeletons that automatically adapt to your app.
 (https://www.npmjs.com/package/react-loading-skeleton) 
   - Install by npm/yarn with react-loading-skeleton
