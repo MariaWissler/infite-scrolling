@@ -5,7 +5,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm dependencies` About: 
+### `npm start` and CORS 
+
+Due to CORS, use this plugin that allows you to send cross-domain requests so you are able to see the cards:
+---->(https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### About `npm dependencies` : 
 
 Please install the following dependencies:
 
@@ -28,17 +39,6 @@ Please install the following dependencies:
 - React Bootstrap/one is not enough!
 (https://react-bootstrap.github.io/getting-started/introduction)
   - npm install react-bootstrap bootstrap
-
-### `npm start` and CORS 
-
-Due to CORS, use this plugin that allows you to send cross-domain requests so you are able to see the cards:
----->(https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `npm test`
 
