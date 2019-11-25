@@ -65,4 +65,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+<<<<<<< HEAD
+=======
+### `npm run build` fails to minify
+>>>>>>> 22d94963425f95e5f3c2fc2876c15aa6d721550d
 
