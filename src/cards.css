@@ -1,0 +1,78 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(198, 198, 198, 0.214)
+}
+
+.fallback-card{
+  width: 20em !important;
+  height: 28em;
+  align-content: center !important;
+}
+
+.skeleton{
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgba(60, 59, 59, 0.886) !important;
+  margin-top: 4% !important;
+  margin-left: 10%!important;
+  padding: 5% !important;
+}
+
+.creature-cards {
+  margin-top: 5% !important;
+  flex: 0 4 calc(25% - 1em);
+}
+
+.card {
+  margin-top: 4% !important;
+  border: none !important;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.card-title{
+  font-family: 'Average', serif;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.img {
+  margin-top: 10%;
+}
+.card-body {
+  margin-top: 1% !important;
+  margin-bottom: 1% !important;
+  border-radius: 0px !important;
+  background: rgba(245, 245, 245, 0.344);
+  font-family: 'Average', serif;
+  text-align: center;
+}
+
+.card:hover {
+  border-radius: 0px !important;
+  box-shadow: 0 4px 10px 0 rgba(192, 193, 189, 0.331),
+    0 4px 15px 0 #091f36;
+}
+
+.search-bar{
+  background: rgba(6, 35, 99, 0.495);
+  height: 3em;
+}
+
+.search-input{
+  width: 20em !important;
+  height: 2em;
+  margin-left: 78em;
+  margin-top: .5em;
+  font-family: 'Average', serif;
+}
+
+.btn-secondary{
+  background: rgba(6, 35, 99, 0.495) !important;
+  border-color: none !important;
+  font-family: 'Average', serif;
+}
+
