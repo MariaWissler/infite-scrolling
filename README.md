@@ -4,6 +4,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm dependencies`
+
+Please install the following dependencies:
+
+- Axios/to make our request!
+(https://www.npmjs.com/package/axios)
+npm install axios
+
+- Skeleton/Makes beautiful, animated loading skeletons that automatically adapt to your app.
+(https://www.npmjs.com/package/react-loading-skeleton) 
+Install by npm/yarn with react-loading-skeleton
+
+- React Strap/Easy to use React Bootstrap 4 components 
+(https://reactstrap.github.io/) 
+npm install --save reactstrap react react-dom
+
+- React Bootstrap/one is not enough!
+(https://react-bootstrap.github.io/getting-started/introduction)
+npm install react-bootstrap bootstrap
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
@@ -12,6 +32,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+
+READ----> Side Note: if your search returns no results, please refresh the page, as router hasn't been implemented in ths version <----
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
@@ -43,26 +65,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
