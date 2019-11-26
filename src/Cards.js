@@ -45,8 +45,8 @@ class CardComponent extends Component {
       return null;
     }
     if (totalCards !== this.state.cards.length) {
-        //also in case if a search we stop the scrolling om=nce all the results are shown 
-        
+      //also in case if a search we stop the scrolling om=nce all the results are shown
+
       this.setState(
         {
           page: page + 1
@@ -59,14 +59,12 @@ class CardComponent extends Component {
   };
 
   handleInput = event => {
-      // we got a search !
+    // we got a search !
     this.setState({ queryName: event.target.value });
     console.log(`this is the search value`, this.state.queryName);
   };
 
   getMagicCards = () => {
-    
-
     const { cards, page, pageSize } = this.state;
     this.setState({
       isLoading: true
@@ -93,14 +91,15 @@ class CardComponent extends Component {
   };
 
   getMagicCardsByName = () => {
-
     const { page, pageSize, queryName } = this.state;
 
     this.setState({
       isLoading: true
     });
 
-    let searchName = queryName.toLowerCase();
+    let searchName = queryName.replace(/^\w/, c => c.toUpperCase());
+    //looking at the API most names start with capitol letter, we quet the first letter of our query capitalized
+    console.log(searchName);
 
     const request = axios({
       method: "GET",
@@ -146,14 +145,11 @@ class CardComponent extends Component {
           ) : (
             <div></div>
           )}
-           <div className="reload">
-        <Button
-              className="load-all"
-              onClick={this.getMagicCards}
-            >
-             Reload All Cards
-        </Button>
-        </div>
+          <div className="reload">
+            <Button className="load-all" onClick={this.getMagicCards}>
+              Reload All Cards
+            </Button>
+          </div>
         </div>
         <div className="cards">
           {cards.map(card => (
@@ -180,9 +176,9 @@ class CardComponent extends Component {
                 <CardText>Set Name: {card.setName}</CardText>
                 <CardText>Original Type: {card.type}</CardText>
               </CardBody>
-          </Card> 
-        ))}
-        
+            </Card>
+          ))}
+
           {isLoading && (
             <div className="skeleton">
               <SkeletonTheme color="#d6d3d3">
