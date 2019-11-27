@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Infite Scrolling 
+## Infinite Scrolling 
 
 This is an inifite scrolling exercise in React, you will be able to see the cards from Magic: The Gathering featuring the kind creature, there is also a simple search by name, this is the result of calling the following API: (https://docs.magicthegathering.io/)
 
