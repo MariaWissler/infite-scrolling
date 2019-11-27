@@ -6,9 +6,9 @@ This is an inifite scrolling exercise in React, you will be able to see the card
 
 ## How to see it ?
 
-Please clone the project, run npm install and then npm start 
+Please clone the project, run npm install and then npm start, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm start` and CORS 
+### `About npm start` and CORS 
 
 Due to CORS, use this plugin that allows you to send cross-domain requests so you are able to see the cards:
 ---->(https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
