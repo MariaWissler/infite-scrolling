@@ -2,7 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Infite Scrolling 
 
-This is an inifite scrolling exercise in React, you will be able to see the cards from Magic The Gathering featuring the kind creature, there is a simple search by name, this is the result of calling the following API: (https://docs.magicthegathering.io/)
+This is an inifite scrolling exercise in React, you will be able to see the cards from Magic: The Gathering featuring the kind creature, there is also a simple search by name, this is the result of calling the following API: (https://docs.magicthegathering.io/)
+
 ## How to see it ?
 
 Please clone the project, run npm install and then npm start 
@@ -18,9 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### About `npm dependencies` : 
-
-Please install the following dependencies:
+### About the `npm dependencies` used: 
 
 - Axios/to make our request!
 (https://www.npmjs.com/package/axios)
