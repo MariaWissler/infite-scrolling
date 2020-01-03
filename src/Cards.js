@@ -45,7 +45,7 @@ class CardComponent extends Component {
       return null;
     }
     if (totalCards !== this.state.cards.length) {
-      //also in case if a search we stop the scrolling om=nce all the results are shown
+      //also in case if a search we stop the scrolling once all the results are shown
 
       this.setState(
         {
@@ -112,7 +112,7 @@ class CardComponent extends Component {
         this.setState({
           cards: data.cards,
           isLoading: false,
-          totalCards: this.state.cards.length
+          totalCards: data.cards.length
         });
         console.log(this.state.totalCards);
       })

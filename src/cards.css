@@ -1,16 +1,16 @@
 .cards {
-  margin-top: 4%;
+  margin-top: 10%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
 }
 
 .fallback-card{
-  width: 20em !important;
-  height: 28em;
+  width: 16em !important;
+  height: 24em;
   align-content: center !important;
+  
 }
 
 .skeleton{
@@ -62,8 +62,7 @@
   position: absolute;
   background: rgba(6, 35, 99, 0.495);
   height: 4.2em;
-  width: 101%
- 
+  width: 102%;
 }
 
 .search-input{
@@ -83,7 +82,8 @@
 
 .reload{
   background: rgba(198, 198, 198, 0.214);
-  width: 101%;
+  width: 8em !important;
+  
 }
 
 
@@ -92,6 +92,6 @@
   background: rgba(6, 35, 99, 0.495)  !important;
   border-color: none !important;
   font-family: 'Average', serif;
-  margin-left: 90% !important;
+  margin-left: 85% !important;
   margin-top: 2em;
 }
